@@ -1,5 +1,5 @@
 # WebScraper
- Code for scraping discourse<br>
+ Code for scraping file are in respective folders<br>
 <h1>for virtual enviroment</h1>
 <strong>command: pip install virtualenv</strong> <br><br>
 <strong>command: virtualenv venv_name </strong> <br>
