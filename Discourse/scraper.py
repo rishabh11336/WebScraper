@@ -7,12 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 import time
-import csv
 
-# Start a new instance of the Chrome browser
-#driver = webdriver.Chrome()
-#driver = webdriver.Edge(r"msedgedriver.exe")
-#driver = webdriver.Firefox()
+
 driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 # Navigate to the login page
 login_url = "https://discourse.onlinedegree.iitm.ac.in/login"
@@ -63,18 +59,13 @@ usernames = soup.find_all("span", class_="username bold")
 name_margin = soup.find_all("span", class_="name margin")
 numbers = soup.find_all("span", class_="number")
 time_read = soup.find_all("span", class_="time-read")
-#usernames = [str(tag) for tag in soup.find_all()]
+
 
 L = len(usernames)
-#L1 = len(name_margin)
-#print(L,L1,type(usernames),type(name_margin))
-#print("{},{}".format(usernames[1].text.strip(), name_margin[1].text.strip()))
+
 with open("file1.csv", "w", encoding="utf-8") as f:
-    #writer = csv.writer(f)
     f.write("Username,Name,<3Received,<3Given,Topic Created,Replies Posted,Topics Viewed,Posts Read,Days Visited,Time Read")
     for i in range(L):
-        #if 'AD_iitm' == usernames[i].text.strip().encode("UTF-8", errors="ignore").decode("UTF-8", errors="ignore"):
-        #writer.writerows(usernames[i].text.strip().encode("UTF-8", errors="ignore").decode("UTF-8", errors="ignore"), name_margin[i].text.strip().encode("UTF-8", errors="ignore").decode("UTF-8", errors="ignore"), numbers[(7*i)], numbers[(7*i)+1], numbers[(7*i)+2], numbers[(7*i)+3], numbers[(7*i)+4], numbers[(7*i)+5], numbers[(7*i)+6], time_read[i])
         f.write("{},{},{},{},{},{},{},{},{},{}".format(usernames[i].text.strip().encode("UTF-8", errors="ignore").decode("UTF-8", errors="ignore"), name_margin[i].text.strip().encode("UTF-8", errors="ignore").decode("UTF-8", errors="ignore"), numbers[(7*i)].text, numbers[(7*i)+1].text, numbers[(7*i)+2].text, numbers[(7*i)+3].text, numbers[(7*i)+4].text, numbers[(7*i)+5].text, numbers[(7*i)+6].text, time_read[i].text) + "\n")
 # Extract data from soup and store it in a structured format
 
