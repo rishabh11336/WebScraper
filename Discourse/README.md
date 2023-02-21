@@ -5,11 +5,11 @@ https://discourse.onlinedegree.iitm.ac.in/u?asc=true&order=likes_received&period
 ```
 - Warning:- Do not use above code for malicious activity.
 ### Use requirement.txt to install compatible packages
-#### command:
+- command:
 ```
 pip install -r requirment.txt
 ```
-#### To run flask server
+- To run flask server
 ```
 python scraper.py
 ```
