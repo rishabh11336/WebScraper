@@ -1,13 +1,22 @@
 # WebScraper
  Code for scraping are in respective folders<br>
-<h1>for virtual enviroment</h1>
-<strong>command: pip install virtualenv</strong> <br><br>
-<strong>command: virtualenv venv_name </strong> <br>
-<h2>to learn more about venv refer to</h2>
+## for virtual enviroment</h1>
+```
+command: pip install virtualenv
+```
+```
+command: virtualenv venv_name
+```
+## to learn more about virtual enviroment refer to
+```
 https://medium.com/@asusrishabh/requirements-txt-in-python-947b0b43bbe6
+```
 
-<br>
-<h2>use requirement.txt to install compatible packages</h2>
-<strong>command: pip install -r requirment.txt</strong><br>
-<h2> To run flask server</h2>
-<strong>python scraper.py</strong>
+## use requirement.txt to install compatible packages
+```
+command: pip install -r requirment.txt
+```
+## To run flask server
+```
+python scraper.py
+```
