@@ -9,7 +9,7 @@ https://discourse.onlinedegree.iitm.ac.in/u?asc=true&order=likes_received&period
 ```
 pip install -r requirment.txt
 ```
-- To run flask server
+- To run script
 ```
 python scraper.py
 ```
